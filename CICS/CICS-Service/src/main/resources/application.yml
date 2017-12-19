@@ -24,3 +24,13 @@ spring:
     encoding: UTF-8
     content-type: text/html
 ---
+#log 配置
+logging: 
+  file: d:\logs\cics.log
+  level: 
+    root: WARN
+    org: 
+      springframework: 
+        web: DEBUG
+      hibernate: error
+  

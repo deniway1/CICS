@@ -11,6 +11,7 @@ public class CicsApplicationTests {
 
 	@Test
 	public void contextLoads() {
+		System.out.println("12313");
 	}
 
 }
