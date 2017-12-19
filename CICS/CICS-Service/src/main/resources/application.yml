@@ -6,7 +6,6 @@ spring:
     password: cdpdmp
     driver-class-name: oracle.jdbc.driver.OracleDriver
     #jndi-name=java:jboss/jdbc/b2gbi
-    
   #JPA配置
   jpa:
     show-sql: true
@@ -16,7 +15,7 @@ spring:
       dialect:
         Dialect: org.hibernate.dialect.Oracle9iDialect
       #naming: 
-       # physical-strategy: com.example.MyPhysicalNamingStrategy
+        #physical-strategy: com.example.MyPhysicalNamingStrategy
   #thymeleaf配置
   thymeleaf:
     prefix: classpath:/templates/
@@ -24,3 +23,4 @@ spring:
     mode: HTML5
     encoding: UTF-8
     content-type: text/html
+---
