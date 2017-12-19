@@ -1,0 +1,26 @@
+spring:
+  #数据库配置
+  datasource:
+    url: jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=localhost)(PORT=1521)))(CONNECT_DATA=(SERVICE_NAME=orcl)))
+    username: cdpdmp
+    password: cdpdmp
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    #jndi-name=java:jboss/jdbc/b2gbi
+    
+  #JPA配置
+  jpa:
+    show-sql: true
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+      dialect:
+        Dialect: org.hibernate.dialect.Oracle9iDialect
+      #naming: 
+       # physical-strategy: com.example.MyPhysicalNamingStrategy
+  #thymeleaf配置
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+    content-type: text/html

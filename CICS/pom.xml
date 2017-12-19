@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.sun</groupId>
+	<artifactId>CICS</artifactId>
+	<version>1.0</version>
+	<packaging>pom</packaging>
+
+	<name>CICS</name>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.9.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<!-- <tomcat.version>7.0.55</tomcat.version>
+		<maven.compiler.source>${java.version}</maven.compiler.source>
+		<maven.compiler.target>${java.version}</maven.compiler.target>
+		<woodstox.version>4.1.1</woodstox.version>
+		<b2bplatform.version>20161103</b2bplatform.version> -->
+		<oracle.version>11.2.0.3</oracle.version>
+	</properties>
+	
+	<!-- 子模块 -->
+	<modules>
+		<!--常量、bean、interface -->
+		<module>CICS-Interface</module>
+		<!-- Restful webservice、dao、manager、service -->
+		
+		<module>CICS-Service</module>
+	</modules>
+	
+	<repositories>
+		<!-- spring仓库 -->
+		<repository>
+			<id>spring-releases</id>
+			<url>https://repo.spring.io/libs-release</url>
+		</repository>
+		<repository>
+			<id>mvnrepository.com</id>
+			<url>http://central.maven.org/maven2/</url>
+		</repository>
+		
+	</repositories>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+        <dependency>
+	        <groupId>org.springframework.boot</groupId>
+	        <artifactId>spring-boot-devtools</artifactId>
+	        <optional>true</optional>
+	    </dependency>
+	    <dependency>
+	        <groupId>org.springframework.boot</groupId>
+	        <artifactId>spring-boot-starter-data-jpa</artifactId>
+	    </dependency>
+	</dependencies>
+	<description>小正的工程</description>
+</project>
