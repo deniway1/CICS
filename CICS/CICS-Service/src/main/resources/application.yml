@@ -6,6 +6,15 @@ spring:
     password: cdpdmp
     driver-class-name: oracle.jdbc.driver.OracleDriver
     #jndi-name=java:jboss/jdbc/b2gbi
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
   #JPA配置
   jpa:
     show-sql: true
@@ -23,6 +32,11 @@ spring:
     mode: HTML5
     encoding: UTF-8
     content-type: text/html
+---
+security:
+  require-ssl: false
+  headers:
+     xss: true
 ---
 #log 配置
 logging: 
