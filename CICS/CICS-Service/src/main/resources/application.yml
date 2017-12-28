@@ -33,10 +33,10 @@ spring:
     encoding: UTF-8
     content-type: text/html
 ---
-security:
-  require-ssl: false
-  headers:
-     xss: true
+#security:
+#  require-ssl: false
+#  headers:
+#     xss: true
 ---
 #log 配置
 logging: 

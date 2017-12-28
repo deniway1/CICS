@@ -14,9 +14,9 @@ public class TestController {
 	@Autowired
 	private ServerConfig config;
 	
-	@RequestMapping("/hello")
+	@RequestMapping("/home")
     public String hello(Map<String,Object> map){
 		map.put("hello", config.getName());
-        return "/hello";
+        return "hello.html";
     }
 }
