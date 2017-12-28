@@ -24,7 +24,8 @@ public class LoginController {
 	
 	
 	@RequestMapping("/login")
-	public String login(@RequestParam TBasUser user) {
+	public String login(@RequestParam String account,@RequestParam String pass) {
+		
 		return "welcome";
 	}
 }
