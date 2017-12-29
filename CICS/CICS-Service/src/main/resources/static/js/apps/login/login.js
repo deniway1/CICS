@@ -26,16 +26,16 @@ $(document).ready(function(){
 		if($('#mainForm').data('bootstrapValidator').isValid()){
 			$.ajax({
 				type:"post",
-				url:"login",
+				url:"/login",
 				async:true,
-				dataType: 'json'
+				dataType: 'json',
 				data:{
-					account:$('#account').val();
-					pass:$('#inputPassword').val();
+					account:$('#account').val(),
+					pass:$('#inputPassword').val()
 				},
 				success:function(data, textStatus){
-					
-				}
+					console.log(data)
+				},
 				error: function(XMLHttpRequest, textStatus, errorThrown){
 					
 				}

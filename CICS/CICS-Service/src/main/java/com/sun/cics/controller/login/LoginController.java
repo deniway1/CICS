@@ -10,12 +10,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.sun.cics.bean.TBasUser;
+import com.sun.cics.service.user.IUserService;
 
 @Controller
 public class LoginController {
 	
 	@Autowired
-	private HttpServletRequest req;
+	private IUserService userService;
 
 	@RequestMapping("/init")
 	public String init() {
@@ -25,7 +26,7 @@ public class LoginController {
 	
 	@RequestMapping("/login")
 	public String login(@RequestParam String account,@RequestParam String pass) {
-		
+		TBasUser user = userService.queryUser(account,pass);
 		return "welcome";
 	}
 }

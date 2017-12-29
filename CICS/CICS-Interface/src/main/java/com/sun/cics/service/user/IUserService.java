@@ -6,4 +6,6 @@ public interface IUserService {
 
 	public TBasUser findUserByAccount(String account);
 
+	public TBasUser queryUser(String account, String pass);
+
 }
