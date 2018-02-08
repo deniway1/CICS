@@ -4,8 +4,5 @@ import com.sun.cics.bean.TBasUser;
 
 public interface IUserService {
 
-	public TBasUser findUserByAccount(String account);
-
-	public TBasUser queryUser(String account, String pass);
-
+	public TBasUser queryUserByAccount(String account);
 }

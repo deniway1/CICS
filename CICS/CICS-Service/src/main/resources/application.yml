@@ -29,7 +29,7 @@ spring:
   thymeleaf:
     prefix: classpath:/templates/
     suffix: .html
-    mode: HTML5
+    mode: LEGACYHTML5
     encoding: UTF-8
     content-type: text/html
 ---
@@ -47,4 +47,12 @@ logging:
       springframework: 
         web: DEBUG
       hibernate: error
+############################# 自定义配置 ######################     
+myYml: 
+  exceptions:
+    #通用
+    ERROR_NULL_VALUE: 参数{0}不能为空！
+    
+    #用户
+    ACCOUNT_NOT_FOUND: 未找到账号为{0}的用户！
   

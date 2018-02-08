@@ -37,7 +37,7 @@ $(document).ready(function(){
 					console.log(data)
 				},
 				error: function(XMLHttpRequest, textStatus, errorThrown){
-					
+					alert();	
 				}
 			});
 		};

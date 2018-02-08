@@ -1,10 +1,23 @@
 package com.sun.cics.bean;
 
 import java.io.Serializable;
-import javax.persistence.*;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import com.sun.cics.base.BaseEntity;
 
 
 /**
@@ -14,7 +27,7 @@ import java.util.List;
 @Entity
 @Table(name="T_BAS_ORG")
 @NamedQuery(name="TBasOrg.findAll", query="SELECT t FROM TBasOrg t")
-public class TBasOrg implements Serializable {
+public class TBasOrg extends BaseEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id

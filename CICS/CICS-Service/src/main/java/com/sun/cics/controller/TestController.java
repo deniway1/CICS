@@ -17,6 +17,6 @@ public class TestController {
 	@RequestMapping("/home")
     public String hello(Map<String,Object> map){
 		map.put("hello", config.getName());
-        return "hello.html";
+        return "hello";
     }
 }
